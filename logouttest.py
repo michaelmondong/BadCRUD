@@ -6,8 +6,8 @@ class LogoutTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        option = webdriver.EdgeOptions()
-        cls.browser = webdriver.Edge(options=option)
+        option = webdriver.FirefoxOptions()
+        cls.browser = webdriver.Firefox(options=option)
         try:
             cls.url = os.environ['URL']
         except:
