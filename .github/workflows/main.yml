@@ -44,7 +44,7 @@ jobs:
         run: pytest logincorrect.py
 
       - name: Run test using pytest
-        run: pytest createtest.py
+        run: pytest logouttest.py
 
       - name: Run test using pytest
         run: pytest profiletest.py
