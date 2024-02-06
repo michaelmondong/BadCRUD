@@ -16,7 +16,7 @@ class CreateContact(unittest.TestCase):
         try:
             cls.url = os.environ['URL']
         except:
-            cls.url = "http://localhost/4444"
+            cls.url = "http://localhost"
         cls.name_query = ''.join(random.choices(string.ascii_letters, k=10))
 
     def test(self):
