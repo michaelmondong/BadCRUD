@@ -20,7 +20,7 @@ class CreateContact(unittest.TestCase):
             cls.url = "http://localhost/4444"
         cls.name_query = ''.join(random.choices(string.ascii_letters, k=10))
 
-    def test(self)
+    def test(self):
         self.create_contact()
 
     def create_contact(self):
