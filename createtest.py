@@ -38,10 +38,10 @@ class CreateContact(unittest.TestCase):
         create_url = self.url + '/create.php'
         self.browser.get(create_url)
 
-        self.browser.find_element(By.ID, 'name').send_keys(self.name_query)
-        self.browser.find_element(By.ID, 'email').send_keys('test@example.com')
-        self.browser.find_element(By.ID, 'phone').send_keys('1234567890')
-        self.browser.find_element(By.ID, 'title').send_keys('Developer')
+        self.browser.find_element(By.ID, 'name').send_keys('michael')
+        self.browser.find_element(By.ID, 'email').send_keys('michael@example.com')
+        self.browser.find_element(By.ID, 'phone').send_keys('081234567890')
+        self.browser.find_element(By.ID, 'title').send_keys('Cadet')
 
         self.browser.find_element(By.CSS_SELECTOR, 'input[type="submit"]').click()
 
