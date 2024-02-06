@@ -42,19 +42,19 @@ jobs:
         run: pip install -U selenium pytest pytest-xdist
 
       - name: Run test using pytest
-        run: pytest -v -n createtest.py
+        run: pytest createtest.py
 
       - name: Run test using pytest
-        run: pytest -v -n logouttest.py
+        run: pytest logouttest.py
 
       - name: Run test using pytest
-        run: pytest -v -n profiletest.py
+        run: pytest profiletest.py
 
       - name: Run test using pytest
-        run: pytest -v -n updatetest.py
+        run: pytest updatetest.py
 
       - name: Run test using pytest
-        run: pytest -v -n xsstest.py
+        run: pytest xsstest.py
 
       - name: stop docker
         run: docker stop docker-apache
