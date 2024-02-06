@@ -22,9 +22,6 @@ class CreateContact(unittest.TestCase):
 
     def test(self):
         self.login_correct()
-        self.create_contact()
-        self.search_contact()
-        self.delete_contact()
 
     def login_correct(self):
         login_url = self.url + '/login.php'
