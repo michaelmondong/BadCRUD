@@ -11,12 +11,12 @@ class CreateContact(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        option = webdriver.EdgeOptions()
-        cls.browser = webdriver.Edge(options=option)
+        option = webdriver.FirefoxOptions()
+        cls.browser = webdriver.Firefox(options=option)
         try:
             cls.url = os.environ['URL']
         except:
-            cls.url = "http://localhost"
+            cls.url = "http://localhost/4444"
         cls.name_query = ''.join(random.choices(string.ascii_letters, k=10))
 
     def test(self):
