@@ -12,7 +12,6 @@ class CreateContact(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         option = webdriver.EdgeOptions()
-        option.add_argument('--headless')
         cls.browser = webdriver.Edge(options=option)
         try:
             cls.url = os.environ['URL']
