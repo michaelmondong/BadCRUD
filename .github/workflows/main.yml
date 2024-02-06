@@ -41,7 +41,7 @@ jobs:
         run: pip install -U selenium pytest pytest-xdist
 
       - name: Run test using pytest
-        run: pytest login_correct.py
+        run: pytest createtest.py
 
       - name: Run test using pytest
         run: pytest logouttest.py
