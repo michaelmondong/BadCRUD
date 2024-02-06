@@ -11,13 +11,14 @@ class CreateContact(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        options = webdriver.FirefoxOptions()
-        options.add_argument('--ignore-ssl-error=yes')
-        options.add_argument('--ignore-certificate-errors')
-        server = 'http://localhost:4444'
-
-    self.browser = webdriver.Remote(command_executor=server, options=options)
-    self.addCleanup(self.browser.quit)
+        option = webdriver.FirefoxOptions()
+        option.add_argument('--headless')
+        cls.browser = webdriver.Firefox(options=option)
+        try:
+            cls.url = os.environ['URL']
+        except:
+            cls.url = "http://localhost/4444"
+        cls.name_query = ''.join(random.choices(string.ascii_letters, k=10))
 
     def test(self):
         self.login_correct()
